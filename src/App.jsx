@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Navbar/Home.jsx";
 
 /* ── Placeholder pages (each teammate fills their page) ── */
 const Placeholder = ({ title }) => (
@@ -27,7 +28,7 @@ export default function App() {
             <Navbar />
 
             <Routes>
-                <Route path="/" element={<Placeholder title="Home 🏠" />} />
+                <Route path="/" element={<Home />} />
                 <Route
                     path="/courses"
                     element={<Placeholder title="Courses 📚" />}
