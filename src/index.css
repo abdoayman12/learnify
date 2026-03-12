@@ -1,0 +1,172 @@
+/* ── Google Fonts ────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables (Theme Tokens) ───────────────────────── */
+:root {
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+    --color-accent: #f59e0b;
+    --color-surface: #ffffff;
+    --color-surface-muted: #f8fafc;
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+    --navbar-height: 72px;
+}
+
+.dark {
+    --color-surface: #0f172a;
+    --color-surface-muted: #1e293b;
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --color-border: #334155;
+}
+
+/* ── Base Styles ────────────────────────────────────────── */
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "DM Sans", sans-serif;
+        background-color: var(--color-surface);
+        color: var(--color-text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+}
+
+/* ── Reusable Component Classes ─────────────────────────── */
+@layer components {
+    /* Container */
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    /* Buttons */
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2
+            bg-primary-600 hover:bg-primary-700
+            text-white font-semibold
+            px-5 py-2.5 rounded-xl
+            transition-all duration-200
+            shadow-sm hover:shadow-md
+            focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    }
+
+    .btn-outline {
+        @apply inline-flex items-center justify-center gap-2
+            border-2 border-primary-600 text-primary-600
+            hover:bg-primary-600 hover:text-white
+            font-semibold px-5 py-2.5 rounded-xl
+            transition-all duration-200
+            focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-2
+            text-text-muted hover:text-primary-600 hover:bg-primary-50
+            dark:hover:bg-primary-900/20
+            font-medium px-4 py-2 rounded-lg
+            transition-all duration-200;
+    }
+
+    /* Nav Link */
+    .nav-link {
+        @apply relative font-medium text-[15px] text-text-muted
+            hover:text-primary-600 dark:hover:text-primary-400
+            transition-colors duration-200
+            after:absolute after:bottom-[-4px] after:left-0
+            after:h-[2px] after:w-0 after:bg-primary-600
+            after:transition-all after:duration-300
+            hover:after:w-full;
+    }
+
+    .nav-link.active {
+        @apply text-primary-600 dark:text-primary-400;
+    }
+
+    .nav-link.active::after {
+        @apply w-full;
+    }
+
+    /* Card */
+    .card {
+        @apply bg-white dark:bg-surface-dark-muted
+            rounded-2xl shadow-card
+            border border-[var(--color-border)]
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-lg;
+    }
+
+    /* Section Title */
+    .section-badge {
+        @apply inline-block text-xs font-semibold uppercase tracking-widest
+            text-primary-600 bg-primary-50 dark:bg-primary-900/30
+            px-3 py-1 rounded-full mb-3;
+    }
+
+    .section-title {
+        @apply text-3xl md:text-4xl font-extrabold
+            text-text dark:text-text-inverted mb-4;
+    }
+
+    .section-subtitle {
+        @apply text-text-muted dark:text-text-muted
+            text-base md:text-lg max-w-2xl;
+    }
+}
+
+/* ── Utilities ──────────────────────────────────────────── */
+@layer utilities {
+    .text-gradient {
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .bg-hero {
+        background:
+            radial-gradient(
+                ellipse at 60% 0%,
+                rgba(37, 99, 235, 0.12) 0%,
+                transparent 60%
+            ),
+            radial-gradient(
+                ellipse at 0% 80%,
+                rgba(245, 158, 11, 0.08) 0%,
+                transparent 50%
+            );
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+}
