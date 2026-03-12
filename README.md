@@ -3,20 +3,6 @@
 > A collaborative clone of [learnhub-colorlib.pages.dev](https://learnhub-colorlib.pages.dev/)  
 > Built with **React + Vite + Tailwind CSS**
 
----
-
-## 👥 Team Task Split
-
-| Member | Task |
-|--------|------|
-| **You (Leader)** | Repo setup, Theme, **Navbar** |
-| Teammate 2 | Home page (Hero, Stats, Categories) |
-| Teammate 3 | Courses & Categories pages |
-| Teammate 4 | Instructors & Pricing sections |
-| Teammate 5 | Login, Signup, About pages |
-
----
-
 ## 🚀 GitHub Setup Guide (Step by Step)
 
 ### 📌 Step 1 – Create the Repo (Leader only — أنت بتعملها مرة واحدة)
