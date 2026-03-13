@@ -21,7 +21,7 @@ function Home() {
       
   
  
-<div className='relative text-center py-24 h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-blue-950'>
+<div className='relative text-center py-24 h-[120vh] md:h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-blue-950'>
 
 <div className="absolute pointer-events-none inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:44px_44px]"></div>
 
@@ -356,7 +356,7 @@ function Home() {
 
 
 
-<div className='bg-gray-900 py-28'>
+<div className='bg-gray-900 py-20'>
 
 <div className='max-w-[1290px] mx-auto container w-full'>
 
@@ -368,7 +368,7 @@ function Home() {
 <div className='mx-4 md:mx-0'>
  
 
-<div className='flex items-center justify-between'>
+<div className='flex flex-col md:flex-row md:items-center gap-4 md:gap-0 justify-between'>
 
 
 <div>
@@ -381,7 +381,7 @@ function Home() {
 
 
 
-<div className='items-center gap-2 text-primary-400 hover:text-indigo-800 inline-flex cursor-pointer'>
+<div className='items-center gap-2 text-primary-400 hover:text-indigo-800 inline-flex cursor-pointer pb-8 md:pb-8'>
 <span className='font-semibold'>View All Courses</span>
 <MoveRight size={18}/>
 </div>
@@ -400,7 +400,7 @@ function Home() {
 
 
 
-<div className='flex items-center gap-6'>
+<div className='flex flex-col md:flex-row px-4 md:px-0 items-center gap-6'>
 <div className='rounded-2xl overflow-hidden border border-gray-800 bg-slate-900 cursor-pointer group hover:-translate-y-1 transition-all duration-300'>
 
 
@@ -443,7 +443,7 @@ BestSeller
 
 <div className='text-white font-semibold text-xl pt-3 pb-4 group-hover:text-indigo-400'>
 <span className=''>The Complete Web </span>
-<span className='inline-block md:block leading-none '>Development Bootcamp...</span>
+<span className='inline md:block leading-none'>Development Bootcamp 2032</span>
 </div>
 
 
@@ -574,7 +574,7 @@ BestSeller
 
 <div className='text-white font-semibold text-xl pt-3 pb-4 group-hover:text-indigo-400'>
 <span className=''>Machine Learning A-Z: AI, </span>
-<span className='inline-block md:block leading-none '>Python & R</span>
+<span className='inline md:block leading-none '>Python & R</span>
 </div>
 
 
@@ -705,7 +705,7 @@ NEW
 
 <div className='text-white font-semibold text-xl pt-3 pb-4 group-hover:text-indigo-400'>
 <span className=''>UI/UX Design: The </span>
-<span className='inline-block md:block leading-none '>Complete Guide</span>
+<span className='inline md:block leading-none '>Complete Guide</span>
 </div>
 
 
@@ -839,7 +839,7 @@ BestSeller
 
 <div className='text-white font-semibold text-xl pt-3 pb-4 group-hover:text-indigo-400'>
 <span className=''>AWS Certified Solutions </span>
-<span className='inline-block md:block leading-none '>Architect 2032</span>
+<span className='inline md:block leading-none '>Architect 2032</span>
 </div>
 
 
