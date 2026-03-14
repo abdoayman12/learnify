@@ -19,9 +19,9 @@ function Home() {
 
     <>
       
-  
+
  
-<div className='relative text-center py-24 h-[120vh] md:h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-blue-950'>
+<div className='relative text-center pb-20 pt-[calc(var(--navbar-height)+5rem)] md:pb-28 md:pt-[calc(var(--navbar-height)+7rem)] bg-gradient-to-br from-blue-950 via-indigo-900 to-blue-950'>
 
 <div className="absolute pointer-events-none inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:44px_44px]"></div>
 
@@ -38,7 +38,7 @@ function Home() {
 
 
 
-<div className='font-medium text-xl text-primary-200 mb-8'>
+<div className='font-medium md:text-xl text-[18px] text-primary-200 mb-8 md:px-0 px-3'>
 <span>Master new skills with world-class instructors. Access thousands of courses in </span>
 <span className='inline md:block'>technology, business, design, and more.</span>
 </div>
@@ -896,51 +896,14 @@ BestSeller
 
 </div>
 
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 </div>
 
 
 
 </div>
-
-
 </div>
 
 
@@ -972,8 +935,39 @@ BestSeller
 
 
 
-</div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
