@@ -1,26 +1,20 @@
 import { Link } from "react-router-dom";
 
 import Input from "@/components/UI/Input/Input";
-import GoogleIcon from "@/components/UI/Icons/Google";
-import GitHubIcon from "@/components/UI/Icons/GitHub";
+import GoogleButton from "@/components/Button/GoogleProviderButton";
+import GitHubButton from "@/components/Button/GitHubProviderButton";
+import BookOpenIcon from "@/components/UI/Icons/BookOpen";
+
 import useSignin from "@/hooks/Signin";
 
-import { BookOpen, Eye, EyeOff } from "lucide-react";
-
 const Signin = () => {
-    const { handleSubmit, passwordIsVisible, togglePasswordVisibility } =
-        useSignin();
+    const { handleSubmit } = useSignin();
 
     return (
         <section className="py-20">
             <div className="w-full max-w-md mx-auto px-4">
                 <div className="grid place-items-center mb-8">
-                    <div className="w-12 h-12 bg-primary-600 p-2 flex items-center justify-center rounded-xl text-white group-hover:scale-105 transition duration-300">
-                        <BookOpen
-                            size={30}
-                            className="text-white bg-primary-600"
-                        />
-                    </div>
+                    <BookOpenIcon />
                     <h1 className="w-full text-center text-3xl font-bold mt-6 text-gray-900 dark:text-white">
                         Welcome back
                     </h1>
@@ -36,41 +30,13 @@ const Signin = () => {
                             type="email"
                             placeholder="you@example.com"
                         />
-                        <div className="mb-6">
-                            <div className="flex items-center justify-between">
-                                <label
-                                    htmlFor="password"
-                                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
-                                >
-                                    Password
-                                </label>
-
-                                <a
-                                    href="/forgot-password"
-                                    className="text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400"
-                                >
-                                    Forgot password?
-                                </a>
-                            </div>
-                            <div className="relative mt-2">
-                                <input
-                                    type={
-                                        passwordIsVisible ? "text" : "password"
-                                    }
-                                    id="password"
-                                    name="password"
-                                    placeholder="Enter your password"
-                                    className="mt-2 block w-full rounded-xl border border-gray-300 bg-white px-4 py-3 pr-12 text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-                                />
-                                <button
-                                    type="button"
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-                                    onClick={togglePasswordVisibility}
-                                >
-                                    {passwordIsVisible ? <EyeOff /> : <Eye />}
-                                </button>
-                            </div>
-                        </div>
+                        <Input
+                            label="Password"
+                            name="password"
+                            type="password"
+                            placeholder="Enter your password"
+                            isForgetPasswordVisible
+                        />
                         <div className="flex items-center ">
                             <input
                                 type="checkbox"
@@ -101,14 +67,8 @@ const Signin = () => {
                         <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700" />
                     </div>
                     <div className="grid grid-cols-2 gap-3">
-                        <button className="font-semibold text-gray-600 border py-3 px-4 flex justify-center items-center gap-2 rounded-xl">
-                            <GoogleIcon />
-                            Google
-                        </button>
-                        <button className="font-semibold text-gray-600 border py-3 px-4 flex justify-center items-center gap-2 rounded-xl">
-                            <GitHubIcon />
-                            GitHub
-                        </button>
+                        <GoogleButton />
+                        <GitHubButton />
                     </div>
                 </div>
 
