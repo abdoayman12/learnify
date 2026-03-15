@@ -14,7 +14,7 @@ const Signin = () => {
     return (
         <section className="py-20">
             <div className="w-full max-w-md mx-auto px-4">
-                <div className="place-items-center mb-8">
+                <div className="grid place-items-center mb-8">
                     <div className="w-12 h-12 bg-primary-600 p-2 flex items-center justify-center rounded-xl text-white group-hover:scale-105 transition duration-300">
                         <BookOpen
                             size={30}
