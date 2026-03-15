@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
+import Signin from "./pages/Signin";
 
 /* ── Placeholder pages (each teammate fills their page) ── */
 const Placeholder = ({ title }) => (
@@ -44,10 +45,7 @@ export default function App() {
                     path="/about"
                     element={<Placeholder title="About Us ℹ️" />}
                 />
-                <Route
-                    path="/login"
-                    element={<Placeholder title="Sign In 🔐" />}
-                />
+                <Route path="/login" element={<Signin />} />
                 <Route
                     path="/signup"
                     element={<Placeholder title="Get Started 🚀" />}
