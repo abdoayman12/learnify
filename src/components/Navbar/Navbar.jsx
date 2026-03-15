@@ -52,7 +52,7 @@ function SearchBar({ onClose }) {
               <span
                 key={item}
                 onClick={() => navigate("/courses")}
-                className="bg-surface-muted dark:bg-surface-dark text-text-muted px-3 py-2 rounded-lg text-sm transition-all cursor-pointer hover:text-primary-500 hover:bg-primary-50"
+                className="bg-surface-muted dark:bg-surface-dark text-text-muted px-3 py-2 rounded-lg text-xs md:text-sm transition-all cursor-pointer hover:text-primary-500 hover:bg-primary-50"
               >
                 {item}
               </span>
@@ -94,27 +94,27 @@ function Navbar() {
             {/* btn search */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="flex items-center gap-2 py-2 px-3 bg text-sm bg-surface-muted dark:bg-surface-dark rounded-xl border border-[var(--color-border)] text-text-muted hover:text-primary-500 transition-colors"
+              className="items-center hidden md:flex gap-2 py-2 px-3 bg text-sm bg-surface-muted dark:bg-surface-dark rounded-xl border border-[var(--color-border)] text-text-muted hover:text-primary-500 transition-colors"
             >
               <Search className="w-4 h-4" />
               <span className="hidden lg:inline">Search...</span>
             </button>
             {/* theme icon */}
-            <button className="text-text-muted p-1 transition hover:bg-surface-muted dark:hover:bg-surface-dark-muted rounded-lg hover:text-primary-500">
+            <button className="text-text-muted py-1 px-2 transition hover:bg-surface-muted dark:hover:bg-surface-dark-muted rounded-xl hover:text-primary-500">
               <Moon />
             </button>
             {/* sign in btn */}
-            <Link to={"/login"} className="btn-ghost text-sm">
+            <Link to={"/login"} className="btn-ghost text-sm hidden md:block">
               Sign in
             </Link>
             {/* Get Started */}
-            <Link to={"/signup"} className="btn-primary text-sm py-2">
+            <Link to={"/signup"} className="btn-primary text-sm py-2 hidden md:block">
               Get Started
             </Link>
             {/* mune open */}
             <button
               onClick={() => setOpenMenu(!openMenu)}
-              className="rounded-xl text-text-muted p-2 hover:bg-surface-muted hover:text-primary-500 dark:bg-white transition-all"
+              className="rounded-xl text-text-muted p-2 hover:bg-surface-muted hover:text-primary-500 dark:bg-white transition-all lg:hidden"
             >
               {openMenu ? (
                 <X className="w-5 h-5" />
