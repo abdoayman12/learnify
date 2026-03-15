@@ -1,12 +1,4 @@
-import { useState } from "react";
-
 const useSignin = () => {
-    const [passwordIsVisible, setPasswordIsVisible] = useState(false);
-
-    const togglePasswordVisibility = () => {
-        setPasswordIsVisible((prevState) => !prevState);
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
@@ -15,9 +7,11 @@ const useSignin = () => {
 
         console.log("email:", data.email);
         console.log("password:", data.password);
+
+        e.target.reset();
     };
 
-    return { passwordIsVisible, togglePasswordVisibility, handleSubmit };
+    return { handleSubmit };
 };
 
 export default useSignin;
