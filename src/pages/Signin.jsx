@@ -18,7 +18,7 @@ const Signin = () => {
                     <h1 className="w-full text-center text-3xl font-bold mt-6 text-gray-900 dark:text-white">
                         Welcome back
                     </h1>
-                    <p className="w-full text-center mt-2 text-black/50">
+                    <p className="w-full text-center mt-2 text-black/50 dark:text-gray-400">
                         Sign in to continue your learning journey
                     </p>
                 </div>
