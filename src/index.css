@@ -111,7 +111,12 @@
     .nav-link.active::after {
         @apply w-full;
     }
-
+    .nav-link-mobile {
+        @apply flex items-center gap-2 w-full py-3 px-4 rounded-xl text-text-muted hover:bg-surface-muted hover:text-text dark:hover:bg-surface-dark-muted dark:hover:text-text-inverted transition-all duration-200;
+    }
+    .nav-link-mobile.active {
+        @apply bg-primary-50 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400;
+    }
     /* Card */
     .card {
         @apply bg-white dark:bg-surface-dark-muted

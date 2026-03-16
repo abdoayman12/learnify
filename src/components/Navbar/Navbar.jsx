@@ -6,7 +6,6 @@ import {
   X,
   Sun,
   Moon,
-  ChevronDown,
   BookOpen,
   GraduationCap,
   Users,
@@ -24,12 +23,20 @@ const NAV_LINKS = [
 function SearchBar({ onClose }) {
   const popular = ["Python", "React", "Machine Learning", "Design"];
   const navigate = useNavigate();
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      e.key === "Escape" ? onClose() : "";
+    });
+    document.addEventListener("click", () => onClose());
+  }, [onClose]);
   return (
     <div className="fixed flex inset-0 justify-center items-start z-[200] pt-20 px-4">
       {/* overlay */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      <div className="relative z-[1000] bg-white dark:bg-surface-dark-muted rounded-2xl h-[151px] w-[672px] animate-fade-in-down">
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative z-[1000] bg-white dark:bg-surface-dark-muted rounded-2xl h-[151px] w-[672px] animate-fade-in-down"
+      >
         {/* input */}
         <div className="flex gap-4 items-center px-5 py-4 border-b border-[var(--color-border)] text-text-muted overflow-hidden">
           <Search className="w-5 h-5" />
@@ -53,9 +60,9 @@ function SearchBar({ onClose }) {
                 key={item}
                 onClick={() => {
                   navigate("/courses");
-                  setSearchOpen(false);
+                  onClose();
                 }}
-                className="bg-surface-muted dark:bg-surface-dark text-text-muted px-3 py-2 rounded-lg text-xs md:text-sm transition-all cursor-pointer hover:text-primary-500 hover:bg-primary-50"
+                className="bg-surface-muted dark:bg-primary-900/20 text-text-muted px-3 py-2 rounded-lg text-xs md:text-sm transition-all cursor-pointer hover:text-primary-500 hover:bg-primary-50"
               >
                 {item}
               </span>
@@ -70,11 +77,22 @@ function SearchBar({ onClose }) {
 function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  let getLocalTheme = localStorage.getItem("dark");
+  const [themeMode, setThemeMode] = useState(() =>
+    getLocalTheme ? JSON.parse(getLocalTheme) : false,
+  );
   const { pathname } = useLocation();
   useEffect(() => {
     setOpenMenu(false);
     setSearchOpen(false);
   }, [pathname]);
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", themeMode);
+    localStorage.setItem("dark", themeMode);
+  }, [themeMode]);
+  useEffect(() => {
+    document.addEventListener("click", () => setOpenMenu(false));
+  }, [openMenu]);
   return (
     <>
       <header
@@ -102,15 +120,21 @@ function Navbar() {
           <div className="flex items-center gap-3">
             {/* btn search */}
             <button
-              onClick={() => setSearchOpen(true)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setSearchOpen(true);
+              }}
               className="items-center hidden sm:flex gap-2 py-2 px-3 bg text-sm bg-surface-muted dark:bg-surface-dark rounded-xl border border-[var(--color-border)] text-text-muted hover:text-primary-500 transition-colors"
             >
               <Search className="w-4 h-4" />
               <span className="hidden lg:inline">Search...</span>
             </button>
             {/* theme icon */}
-            <button className="text-text-muted py-1 px-2 transition hover:bg-surface-muted dark:hover:bg-surface-dark-muted rounded-xl hover:text-primary-500">
-              <Moon />
+            <button
+              onClick={() => setThemeMode(!themeMode)}
+              className="text-text-muted p-1.5 transition hover:bg-surface-muted dark:hover:bg-surface-dark-muted rounded-xl hover:text-primary-500"
+            >
+              {themeMode ? <Sun /> : <Moon />}
             </button>
             {/* sign in btn */}
             <Link to={"/login"} className="btn-ghost text-sm hidden sm:block">
@@ -125,8 +149,11 @@ function Navbar() {
             </Link>
             {/* mune open */}
             <button
-              onClick={() => setOpenMenu(!openMenu)}
-              className="rounded-xl text-text-muted p-2 hover:bg-surface-muted hover:text-primary-500 dark:bg-white transition-all lg:hidden"
+              onClick={(e) => {
+                e.stopPropagation();
+                setOpenMenu(!openMenu);
+              }}
+              className="rounded-xl text-text-muted p-2 hover:bg-surface-muted hover:text-primary-500 transition-all lg:hidden"
             >
               {openMenu ? (
                 <X className="w-5 h-5" />
@@ -142,36 +169,41 @@ function Navbar() {
         <div className="fixed inset-0 z-[99] lg:hidden">
           {/* overlay */}
           <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute top-[var(--navbar-height)] bg-white w-full flex flex-col gap-5 px-3 py-4 z-[1000] animate-slide-in">
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="absolute top-[var(--navbar-height)] bg-white dark:bg-surface-dark w-full flex flex-col gap-5 px-3 py-4 z-[1000] animate-slide-in"
+          >
             {/* btn search */}
-            <button onClick={() => {
-              setSearchOpen(true)
-              setOpenMenu(false)
-            }} className="w-full flex items-center gap-3 p-3 text-sm text-text-muted bg-surface-muted border border-[var(--color-border)] rounded-xl">
+            <button
+              onClick={() => {
+                setSearchOpen(true);
+                setOpenMenu(false);
+              }}
+              className="w-full flex items-center gap-3 p-3 text-sm text-text-muted bg-surface-muted dark:bg-surface-dark-muted border border-[var(--color-border)] rounded-xl"
+            >
               <Search className="w-4 h-4" />
               Search For Courses
             </button>
             {/* nav links mopile */}
-            <nav className="flex flex-col gap-1 py-5 border-t border-b border-[var(--color-border)]">
-              {
-                NAV_LINKS.map(item => (
-                  <Link key={item.label} to={item.href} className="flex items-center gap-2 w-full py-3 px-4 rounded-xl text-text-muted hover:bg-surface-muted hover:text-text transition-all">
-                    <item.icon />
-                    {item.label}
-                  </Link>
-                ))
-              }
+            <nav className="flex flex-col gap-2 py-5 border-t border-b border-[var(--color-border)]">
+              {NAV_LINKS.map((item) => (
+                <NavLink
+                  key={item.label}
+                  to={item.href}
+                  className="nav-link-mobile"
+                >
+                  <item.icon />
+                  {item.label}
+                </NavLink>
+              ))}
             </nav>
-              <Link to={"/login"} className="btn-outline text-sm">
-                Sign in
-              </Link>
-              {/* Get Started */}
-              <Link
-                to={"/signup"}
-                className="btn-primary text-sm"
-              >
-                Get Started
-              </Link>
+            <Link to={"/login"} className="btn-outline text-sm">
+              Sign in
+            </Link>
+            {/* Get Started */}
+            <Link to={"/signup"} className="btn-primary text-sm">
+              Get Started
+            </Link>
           </div>
         </div>
       ) : (
