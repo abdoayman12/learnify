@@ -1047,8 +1047,223 @@ BestSeller
 
 
 
+</div>
+</div>
 
 
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-gray-900 pb-16 pt-20 md:py-24'>
+
+
+
+
+
+<div className='text-center'>
+<p className='uppercase text-primary-600 font-semibold tracking-wider text-sm'>Expert Instructors</p>
+<p className='text-white font-bold text-3xl md:text-4xl py-2.5'>Learn From the Best</p>
+<div className='mx-5 md:mx-0 pb-12'>
+<span className='text-gray-400 font-medium'>Our instructors are industry professionals from top companies, passionate about sharing </span>
+<span className='text-gray-400 font-medium inline md:block leading-none'>their knowledge.</span>
+</div>
+</div>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+<div className='max-w-[1290px] mx-auto container w-full'>
+
+<div className='flex flex-col md:flex-row gap-7 justify-center mx-5 md:mx-0'>
+
+
+
+
+
+
+
+<div className='bg-gray-800 rounded-2xl cursor-pointer text-center py-6 px-6 group min-w-[280px]'>
+<img src={girl1} alt="girl1" className='w-24 h-24 rounded-full ring-4 ring-gray-700 mx-auto'/>
+<p className='text-white text-lg font-semibold mt-4 group-hover:text-indigo-400'>Sarah Johnson</p>
+<span className='text-gray-400 text-sm'>Senior Software Engineer at </span>
+<span className='text-gray-400 text-sm inline leading-none md:block mb-2.5'>Google</span>
+<div className='flex flex-col items-center justify-center'>
+<div className='flex items-center gap-1.5 mt-2 md:mt-0'>
+<Star stroke='#eab308' fill='#eab308' size={14}/>    
+<div className='flex items-center gap-1.5'>
+<span className='text-white font-bold'>4.9</span>
+<span className='text-gray-500'>(12K)</span>
+</div>
+</div>
+<div className='flex items-center gap-5 border-t w-full justify-center border-gray-700 mt-3 pt-3'>
+<div>
+<p className='text-white font-bold text-lg'>89K</p>
+<p className='text-sm text-gray-500'>Students</p>
+</div>
+<div>
+<p className='text-white font-bold text-lg'>8</p>
+<p className='text-sm text-gray-500'>Courses</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-gray-800 rounded-2xl cursor-pointer text-center py-6 px-6 group min-w-[280px]'>
+<img src={boy1} alt="girl1" className='w-24 h-24 rounded-full ring-4 ring-gray-700 mx-auto'/>
+<p className='text-white text-lg font-semibold mt-4 group-hover:text-indigo-400'>Michael Chen</p>
+<span className='text-gray-400 text-sm mb-2.5'>Data Science Lead at Netflix</span>
+<div className='flex flex-col items-center justify-center'>
+<div className='flex items-center gap-1.5 md:mt-0'>
+<Star stroke='#eab308' fill='#eab308' size={14}/>    
+<div className='flex items-center gap-1.5'>
+<span className='text-white font-bold'>4.8</span>
+<span className='text-gray-500'>(9K)</span>
+</div>
+</div>
+<div className='flex items-center gap-5 border-t w-full justify-center border-gray-700 mt-3 pt-3'>
+<div>
+<p className='text-white font-bold text-lg'>62K</p>
+<p className='text-sm text-gray-500'>Students</p>
+</div>
+<div>
+<p className='text-white font-bold text-lg'>6</p>
+<p className='text-sm text-gray-500'>Courses</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-gray-800 rounded-2xl cursor-pointer text-center py-6 px-6 group min-w-[280px]'>
+<img src={girl2} alt="girl1" className='w-24 h-24 rounded-full ring-4 ring-gray-700 mx-auto'/>
+<p className='text-white text-lg font-semibold mt-4 group-hover:text-indigo-400'>Emily Rodriguez</p>
+<span className='text-gray-400 text-sm mb-2.5'>Principal Designer at Airbnb</span>
+<div className='flex flex-col items-center justify-center'>
+<div className='flex items-center gap-1.5 md:mt-0'>
+<Star stroke='#eab308' fill='#eab308' size={14}/>    
+<div className='flex items-center gap-1.5'>
+<span className='text-white font-bold'>4.9</span>
+<span className='text-gray-500'>(7K)</span>
+</div>
+</div>
+<div className='flex items-center gap-5 border-t w-full justify-center border-gray-700 mt-3 pt-3'>
+<div>
+<p className='text-white font-bold text-lg'>45K</p>
+<p className='text-sm text-gray-500'>Students</p>
+</div>
+<div>
+<p className='text-white font-bold text-lg'>5</p>
+<p className='text-sm text-gray-500'>Courses</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-gray-800 rounded-2xl cursor-pointer text-center py-6 px-6 group min-w-[280px]'>
+<img src={boy2} alt="girl1" className='w-24 h-24 rounded-full ring-4 ring-gray-700 mx-auto'/>
+<p className='text-white text-lg font-semibold mt-4 group-hover:text-indigo-400'>David Kim</p>
+<span className='text-gray-400 text-sm mb-2.5'>AWS Solutions Architect</span>
+<div className='flex flex-col items-center justify-center'>
+<div className='flex items-center gap-1.5 md:mt-0'>
+<Star stroke='#eab308' fill='#eab308' size={14}/>    
+<div className='flex items-center gap-1.5'>
+<span className='text-white font-bold'>4.7</span>
+<span className='text-gray-500'>(5K)</span>
+</div>
+</div>
+<div className='flex items-center gap-5 border-t w-full justify-center border-gray-700 mt-3 pt-3'>
+<div>
+<p className='text-white font-bold text-lg'>38K</p>
+<p className='text-sm text-gray-500'>Students</p>
+</div>
+<div>
+<p className='text-white font-bold text-lg'>7</p>
+<p className='text-sm text-gray-500'>Courses</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div className='flex justify-center'>
+<div className='items-center gap-2 text-indigo-400 hover:text-indigo-700 inline-flex cursor-pointer mt-12'>
+<span className='font-semibold'>View All Instructors</span>
+<MoveRight size={18}/>
 </div>
 </div>
 
@@ -1079,8 +1294,12 @@ BestSeller
 
 
 
+
 </div>
-</div>
+
+
+
+
 
 
 
