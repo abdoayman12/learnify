@@ -124,7 +124,7 @@ function Navbar() {
                 e.stopPropagation();
                 setSearchOpen(true);
               }}
-              className="items-center hidden sm:flex gap-2 py-2 px-3 bg text-sm bg-surface-muted dark:bg-surface-dark rounded-xl border border-[var(--color-border)] text-text-muted hover:text-primary-500 transition-colors"
+              className="items-center hidden sm:flex gap-2 py-2 px-3 bg text-sm bg-surface-muted dark:bg-surface-dark-muted rounded-xl border border-[var(--color-border)] text-text-muted hover:text-primary-500 transition-colors"
             >
               <Search className="w-4 h-4" />
               <span className="hidden lg:inline">Search...</span>
