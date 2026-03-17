@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
-import Home from "./components/Navbar/Home.jsx";
+import About from "./pages/About";
 
 /* ── Placeholder pages (each teammate fills their page) ── */
 const Placeholder = ({ title }) => (
@@ -43,10 +43,7 @@ export default function App() {
                     path="/instructors"
                     element={<Placeholder title="Instructors 👩‍🏫" />}
                 />
-                <Route
-                    path="/about"
-                    element={<Placeholder title="About Us ℹ️" />}
-                />
+                <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Signin />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route
