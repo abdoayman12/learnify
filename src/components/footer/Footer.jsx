@@ -32,7 +32,7 @@ function Footer() {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 justify-items-start md:justify-items-center lg:gap-x-0 lg:grid-cols-5 gap-y-9">
           {/* one row */}
-          <div className="flex flex-col gap-4 w-auto items-start md:items-center">
+          <div className="flex flex-col gap-4 items-start md:items-center lg:items-start">
             {/* Logo */}
             <Link to={"/"} className="flex gap-2 items-center">
               <div className="bg-primary-600 p-2 flex items-center justify-center rounded-xl text-white transition duration-300">
@@ -43,7 +43,7 @@ function Footer() {
               </span>
             </Link>
             {/* text */}
-            <p className="text-text-muted text-lg dark:text-gray-400 text-left md:text-center">
+            <p className="text-text-muted text-[18px] min-w-[350px] dark:text-gray-400 text-left md:text-center lg:text-left">
               Master new skills with world-class instructors. Access thousands
               of courses in technology, business, design, and more.{" "}
             </p>
@@ -68,7 +68,10 @@ function Footer() {
           <div className="flex flex-col gap-3 w-fit">
             <h3 className="font-semibold">Categores</h3>
             {categores.map((items) => (
-              <Link to={items.href} className="text-text-muted w-fit">
+              <Link
+                to={items.href}
+                className="text-text-muted w-fit dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500  transition-all"
+              >
                 {items.label}
               </Link>
             ))}
@@ -77,7 +80,10 @@ function Footer() {
           <div className="flex flex-col gap-3 w-fit">
             <h3 className="font-semibold">Support</h3>
             {company.map((items) => (
-              <Link to={items.href} className="text-text-muted w-fit">
+              <Link
+                to={items.href}
+                className="text-text-muted w-fit dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500  transition-all"
+              >
                 {items.label}
               </Link>
             ))}
@@ -86,7 +92,10 @@ function Footer() {
           <div className="flex flex-col gap-3 w-fit">
             <h3 className="font-semibold">Company</h3>
             {support.map((items) => (
-              <Link to={items.href} className="text-text-muted w-fit">
+              <Link
+                to={items.href}
+                className="text-text-muted w-fit dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500  transition-all"
+              >
                 {items.label}
               </Link>
             ))}
