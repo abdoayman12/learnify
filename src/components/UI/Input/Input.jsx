@@ -29,7 +29,7 @@ const Input = ({
                 {isForgetPasswordVisible && (
                     <a
                         href="/forgot-password"
-                        className="text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400"
+                        className="text-sm font-medium text-primary-600 hover:text-primary-900 dark:text-primary-400 dark:hover:text-primary-900"
                     >
                         Forgot password?
                     </a>

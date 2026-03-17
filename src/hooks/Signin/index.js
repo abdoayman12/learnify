@@ -4,9 +4,11 @@ const useSignin = () => {
         const formData = new FormData(e.target);
 
         const data = Object.fromEntries(formData.entries());
+        const remember = formData.get("remember");
 
-        console.log("email:", data.email);
-        console.log("password:", data.password);
+        data.remember = !!remember;
+
+        console.log(data);
 
         e.target.reset();
     };

@@ -18,7 +18,7 @@ const Signin = () => {
                     <h1 className="w-full text-center text-3xl font-bold mt-6 text-text dark:text-text-inverted">
                         Welcome back
                     </h1>
-                    <p className="w-full text-center mt-2 text-text dark:text-text-inverted">
+                    <p className="w-full text-center mt-2 text-text-muted">
                         Sign in to continue your learning journey
                     </p>
                 </div>
@@ -78,7 +78,7 @@ const Signin = () => {
                     </span>
                     <Link
                         to="/signup"
-                        className="text-primary-600 font-semibold"
+                        className="text-primary-600 font-semibold dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-900"
                     >
                         Sign up for free
                     </Link>
