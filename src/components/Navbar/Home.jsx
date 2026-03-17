@@ -1268,6 +1268,7 @@ BestSeller
 </div>
 
 
+</div>
 
 
 
@@ -1279,6 +1280,125 @@ BestSeller
 
 
 
+
+
+
+
+
+
+
+<div className='bg-gray-950 py-24'>
+
+
+
+
+
+
+
+
+<div className='text-center px-6 md:px-0'>
+<p className='uppercase text-indigo-400 font-semibold tracking-wider text-sm'>Success Stories</p>
+<p className='text-white font-bold text-3xl md:text-4xl py-3'>What Our Students Say</p>
+<span className='text-gray-400 font-medium leading-normal pb-10 inline-block'>Join thousands of students who have transformed their careers with our courses.</span>
+</div>
+
+
+
+
+
+
+<div className='max-w-[1290px] mx-auto container w-full'>
+<div className='flex flex-col md:flex-row items-center gap-8 px-5 md:px-0'>
+<div className='bg-gray-900 rounded-2xl p-8'>
+<div className='flex items-center gap-1.5'>
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>   
+</div> 
+<p className='text-gray-300 pt-4 text-[17px] leading-relaxed'>"Learnify helped me transition from marketing to software engineering in just 6 months. The web development bootcamp was incredibly comprehensive and practical."</p>
+<p className='text-indigo-400 text-sm pt-3 pb-5'>Course: Web Development Bootcamp</p>
+<div className='flex items-center gap-4'>
+<img src={boy1} alt="boy1" className='rounded-full w-12 h-12'/>
+<div className='flex flex-col'>
+<p className='text-white font-bold'>Alex Thompson</p>
+<p className='text-gray-400 text-sm'>Software Engineer at Stripe</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-gray-900 rounded-2xl p-8'>
+<div className='flex items-center gap-1.5'>
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>   
+</div> 
+<p className='text-gray-300 pt-4 text-[17px] leading-relaxed'>"The machine learning courses are top-notch. I went from knowing basic Python to building production ML models. Now I work as a data scientist at a top tech company."</p>
+<p className='text-indigo-400 text-sm pt-3 pb-5'>Course: Machine Learning A-Z</p>
+<div className='flex items-center gap-4'>
+<img src={girl1} alt="girl1" className='rounded-full w-12 h-12'/>
+<div className='flex flex-col'>
+<p className='text-white font-bold'>Maria Garcia</p>
+<p className='text-gray-400 text-sm'>Data Scientist at Meta</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-gray-900 rounded-2xl p-8'>
+<div className='flex items-center gap-1.5'>
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>    
+<Star stroke='#eab308' fill='#eab308' size={16}/>   
+</div> 
+<p className='text-gray-300 pt-4 text-[17px] leading-relaxed'>"As a self-taught designer, Learnify filled all the gaps in my knowledge. The UI/UX courses taught me professional workflows and helped me land my dream job."</p>
+<p className='text-indigo-400 text-sm pt-3 pb-5'>Course: UI/UX Design Complete Guide</p>
+<div className='flex items-center gap-4'>
+<img src={boy2} alt="boy2" className='rounded-full w-12 h-12'/>
+<div className='flex flex-col'>
+<p className='text-white font-bold'>James Wilson</p>
+<p className='text-gray-400 text-sm'>Product Designer at Figma</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 
@@ -1296,6 +1416,125 @@ BestSeller
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

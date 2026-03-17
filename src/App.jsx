@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import Home from "./components/Navbar/Home.jsx";
 
 /* ── Placeholder pages (each teammate fills their page) ── */
 const Placeholder = ({ title }) => (
