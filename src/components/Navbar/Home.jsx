@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Check, MoveRight , Star , ShieldCheck , Clock4, CodeXml ,BarChart3,
 PenTool,Briefcase,Megaphone,Smartphone,Cloud,Camera, 
 Play,
 Users,
-BadgeCheck} from 'lucide-react';
+BadgeCheck,
+ToggleLeft} from 'lucide-react';
 import laptopImg from "../../assets/laptop.jpg"
 import girl1 from "../../assets/girl1.jpg"
 import girl2 from "../../assets/girl2.jpg"
@@ -16,6 +17,10 @@ import videoImg from "../../assets/videoImg.jpg"
 
 
 function Home() {
+
+
+const [isOn , setIsOn] = useState(false)
+
 
 
   return (
@@ -1287,7 +1292,7 @@ BestSeller
 
 
 
-<div className='bg-gray-950 py-24'>
+<div className='bg-slate-800 py-24'>
 
 
 
@@ -1308,7 +1313,7 @@ BestSeller
 
 
 <div className='max-w-[1290px] mx-auto container w-full'>
-<div className='flex flex-col md:flex-row items-center gap-8 px-5 md:px-0'>
+<div className='flex flex-col md:flex-row gap-8 px-5 md:px-0'>
 <div className='bg-gray-900 rounded-2xl p-8'>
 <div className='flex items-center gap-1.5'>
 <Star stroke='#eab308' fill='#eab308' size={16}/>    
@@ -1317,7 +1322,7 @@ BestSeller
 <Star stroke='#eab308' fill='#eab308' size={16}/>    
 <Star stroke='#eab308' fill='#eab308' size={16}/>   
 </div> 
-<p className='text-gray-300 pt-4 text-[17px] leading-relaxed'>"Learnify helped me transition from marketing to software engineering in just 6 months. The web development bootcamp was incredibly comprehensive and practical."</p>
+<p className='text-gray-300 pt-4 text-[17px] leading-relaxed mx-0 md:mx-2'>"Learnify helped me transition from marketing to software engineering in just 6 months. The web development bootcamp was incredibly comprehensive and practical."</p>
 <p className='text-indigo-400 text-sm pt-3 pb-5'>Course: Web Development Bootcamp</p>
 <div className='flex items-center gap-4'>
 <img src={boy1} alt="boy1" className='rounded-full w-12 h-12'/>
@@ -1348,7 +1353,7 @@ BestSeller
 <Star stroke='#eab308' fill='#eab308' size={16}/>    
 <Star stroke='#eab308' fill='#eab308' size={16}/>   
 </div> 
-<p className='text-gray-300 pt-4 text-[17px] leading-relaxed'>"The machine learning courses are top-notch. I went from knowing basic Python to building production ML models. Now I work as a data scientist at a top tech company."</p>
+<p className='text-gray-300 pt-4 text-[17px] leading-relaxed mx-0 md:mx-2'>"The machine learning courses are top-notch. I went from knowing basic Python to building production ML models. Now I work as a data scientist at a top tech company."</p>
 <p className='text-indigo-400 text-sm pt-3 pb-5'>Course: Machine Learning A-Z</p>
 <div className='flex items-center gap-4'>
 <img src={girl1} alt="girl1" className='rounded-full w-12 h-12'/>
@@ -1387,7 +1392,7 @@ BestSeller
 <Star stroke='#eab308' fill='#eab308' size={16}/>    
 <Star stroke='#eab308' fill='#eab308' size={16}/>   
 </div> 
-<p className='text-gray-300 pt-4 text-[17px] leading-relaxed'>"As a self-taught designer, Learnify filled all the gaps in my knowledge. The UI/UX courses taught me professional workflows and helped me land my dream job."</p>
+<p className='text-gray-300 pt-4 text-[17px] leading-relaxed mx-0 md:mx-2'>"As a self-taught designer, Learnify filled all the gaps in my knowledge. The UI/UX courses taught me professional workflows and helped me land my dream job."</p>
 <p className='text-indigo-400 text-sm pt-3 pb-5'>Course: UI/UX Design Complete Guide</p>
 <div className='flex items-center gap-4'>
 <img src={boy2} alt="boy2" className='rounded-full w-12 h-12'/>
@@ -1400,6 +1405,7 @@ BestSeller
 </div>
 </div>
 
+</div>
 
 
 
@@ -1411,6 +1417,58 @@ BestSeller
 
 
 
+
+
+
+
+
+
+
+
+
+<div className='bg-gray-950 py-24'>
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='text-center'>
+<p className='uppercase text-primary-600 font-semibold tracking-wider text-sm'>Pricing Plans</p>
+<p className='text-white font-bold text-3xl md:text-4xl py-2.5'>Choose Your Learning Path</p>
+<div className='mx-5 md:mx-0 pb-5'>
+<span className='text-gray-400 font-medium'>Start free and upgrade when you're ready. All plans include a 30-day money-back </span>
+<span className='text-gray-400 font-medium inline md:block leading-normal'>guarantee.</span>
+</div>
+
+
+<div className='flex items-center justify-center gap-4'>
+
+<div className='flex items-center gap-4'>
+<span className='font-semibold text-white text-sm'>Monthly</span>
+<div onClick={ ()=> setIsOn(!isOn)}>
+<svg className='cursor-pointer rounded-full ' width="60" height="30" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="60" height="30" rx="15" fill={isOn ? "#1D4ED8" : "#374151"}/>
+  <circle 
+  className='transition-all duration-200'
+  cx={isOn ? "45" : "15"} cy="15" r="11" fill="#ffffff"/>
+</svg>
+</div>
+</div>
+
+
+<div className='flex items-center gap-4'>
+<span className='font-semibold text-gray-400 text-sm'>Yearly</span>
+<div className='rounded-full px-2 py-0.5 font-semibold text-green-400 text-sm bg-green-700 bg-opacity-20'>Save 17%</div>
+</div>
+
+</div>
 
 
 
@@ -1508,35 +1566,7 @@ BestSeller
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 
