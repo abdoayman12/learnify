@@ -1,7 +1,15 @@
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 
-const Input = ({ label, name, type, isForgetPasswordVisible, ...props }) => {
+const Input = ({
+    label,
+    name,
+    type,
+    isForgetPasswordVisible,
+    passwordInstruction,
+    isRequired = true,
+    ...props
+}) => {
     const [passwordIsVisible, setPasswordIsVisible] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -30,7 +38,7 @@ const Input = ({ label, name, type, isForgetPasswordVisible, ...props }) => {
             <div className="relative mt-2">
                 <input
                     className="block w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 dark:border-gray-700 dark:bg-gray-800 dark:text-white"
-                    required
+                    required={isRequired}
                     autoComplete="on"
                     id={name}
                     name={name}
