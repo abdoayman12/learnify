@@ -96,7 +96,7 @@ function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 ${openMenu ? "bg-surface-muted" : "bg-white/90"} border-b border-transparent h-[var(--navbar-height)] z-[100] dark:bg-surface-dark/90 backdrop-blur-md transition-all duration-300`}
+        className={`sticky top-0 ${openMenu ? "bg-surface-muted" : "bg-white/90"} border-b border-[var(--color-border)] h-[var(--navbar-height)] z-[100] dark:bg-gray-950 backdrop-blur-md transition-all duration-300`}
       >
         <div className="container-custom h-full flex items-center justify-between gap-4">
           {/* Logo */}
@@ -124,7 +124,7 @@ function Navbar() {
                 e.stopPropagation();
                 setSearchOpen(true);
               }}
-              className="items-center hidden sm:flex gap-2 py-2 px-3 bg text-sm bg-surface-muted dark:bg-surface-dark-muted rounded-xl border border-[var(--color-border)] text-text-muted hover:text-primary-500 transition-colors"
+              className="items-center hidden sm:flex gap-2 py-2 px-3 bg text-sm bg-surface-muted dark:bg-surface-dark rounded-xl border border-[var(--color-border)] text-text-muted hover:text-primary-500 transition-colors"
             >
               <Search className="w-4 h-4" />
               <span className="hidden lg:inline">Search...</span>
@@ -132,7 +132,7 @@ function Navbar() {
             {/* theme icon */}
             <button
               onClick={() => setThemeMode(!themeMode)}
-              className="text-text-muted p-1.5 transition hover:bg-surface-muted dark:hover:bg-surface-dark-muted rounded-xl hover:text-primary-500"
+              className="text-text-muted p-1.5 transition hover:bg-surface-muted dark:hover:bg-surface-dark rounded-xl hover:text-primary-500"
             >
               {themeMode ? <Sun /> : <Moon />}
             </button>

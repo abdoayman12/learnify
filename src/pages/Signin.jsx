@@ -15,10 +15,10 @@ const Signin = () => {
             <div className="w-full max-w-md mx-auto px-4">
                 <div className="grid place-items-center mb-8">
                     <BookOpenIcon />
-                    <h1 className="w-full text-center text-3xl font-bold mt-6 text-gray-900 dark:text-white">
+                    <h1 className="w-full text-center text-3xl font-bold mt-6 text-text dark:text-text-inverted">
                         Welcome back
                     </h1>
-                    <p className="w-full text-center mt-2 text-black/50">
+                    <p className="w-full text-center mt-2 text-text-muted">
                         Sign in to continue your learning journey
                     </p>
                 </div>
@@ -54,7 +54,7 @@ const Signin = () => {
 
                         <button
                             type="submit"
-                            className="w-full rounded-full bg-primary-600 py-4 font-semibold text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-700 hover:shadow-xl"
+                            className="w-full rounded-full bg-primary-600 py-4 font-semibold text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-700/30"
                         >
                             Sign In
                         </button>
@@ -78,7 +78,7 @@ const Signin = () => {
                     </span>
                     <Link
                         to="/signup"
-                        className="text-primary-600 font-semibold"
+                        className="text-primary-600 font-semibold dark:text-primary-400 hover:text-primary-900 dark:hover:text-primary-900"
                     >
                         Sign up for free
                     </Link>

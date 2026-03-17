@@ -15,6 +15,7 @@
     --color-text: #0f172a;
     --color-text-muted: #64748b;
     --color-border: #e2e8f0;
+    --color-body: #ffffff;
     --navbar-height: 72px;
 }
 
@@ -24,6 +25,7 @@
     --color-text: #f8fafc;
     --color-text-muted: #94a3b8;
     --color-border: #334155;
+    --color-body: #030712;
 }
 
 /* ── Base Styles ────────────────────────────────────────── */
@@ -40,7 +42,7 @@
 
     body {
         font-family: "DM Sans", sans-serif;
-        background-color: var(--color-surface);
+        background-color: var(--color-body);
         color: var(--color-text);
         line-height: 1.6;
         -webkit-font-smoothing: antialiased;
@@ -95,17 +97,17 @@
 
     /* Nav Link */
     .nav-link {
-        @apply relative font-medium text-[15px] text-text-muted
-            hover:text-primary-600 dark:hover:text-primary-400
+        @apply relative font-medium text-[15px] text-text-muted dark:text-text-inverted
+            hover:text-primary-600 dark:hover:text-primary-500
             transition-colors duration-200
             after:absolute after:bottom-[-4px] after:left-0
-            after:h-[2px] after:w-0 after:bg-primary-600
+            after:h-[2px] after:w-0 after:bg-primary-700
             after:transition-all after:duration-300
             hover:after:w-full;
     }
 
     .nav-link.active {
-        @apply text-primary-600 dark:text-primary-400;
+        @apply text-primary-600 dark:text-primary-500;
     }
 
     .nav-link.active::after {

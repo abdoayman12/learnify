@@ -1,19 +1,14 @@
-const useSignin = () => {
+const useSignup = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
-
+        const terms = formData.get("terms");
         const data = Object.fromEntries(formData.entries());
-        const remember = formData.get("remember");
-
-        data.remember = !!remember;
-
+        data.terms = !!terms;
         console.log(data);
-
-        e.target.reset();
     };
 
     return { handleSubmit };
 };
 
-export default useSignin;
+export default useSignup;
