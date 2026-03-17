@@ -96,7 +96,7 @@ function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 ${openMenu ? "bg-surface-muted" : "bg-white/90"} border-b border-[var(--color-border)] h-[var(--navbar-height)] z-[100] dark:bg-gray-950 backdrop-blur-md transition-all duration-300`}
+        className={`sticky top-0 ${openMenu ? "bg-surface-muted" : "bg-[var(--color-body)]"} border-b border-[var(--color-border)] h-[var(--navbar-height)] z-[100] backdrop-blur-md transition-all duration-300`}
       >
         <div className="container-custom h-full flex items-center justify-between gap-4">
           {/* Logo */}
