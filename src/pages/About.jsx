@@ -1,6 +1,7 @@
 import { Globe, ShieldCheck, BookOpen } from "lucide-react";
-import { FaUsers } from "react-icons/fa6";
+import { FaUsers, FaArrowRight } from "react-icons/fa6";
 import { FiZap } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const list = [
     {
@@ -56,7 +57,9 @@ const About = () => {
                         </span>
                         <h1 className="mt-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
                             Democratizing education for{" "}
-                            <span className="text-gradient">everyone</span>
+                            <span className="bg-gradient-to-br from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+                                everyone
+                            </span>
                         </h1>
                         <p className="mt-6 text-lg text-primary-200">
                             We believe that education should be accessible to
@@ -140,7 +143,7 @@ const About = () => {
                                     alt="meet the team"
                                 />
                             </div>
-                            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-xl dark:bg-gray-800">
+                            <div className="animate-float absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-xl dark:bg-gray-800">
                                 <div className="flex items-center gap-2">
                                     <div className="rounded-full bg-[#2eff04] w-2 h-2 animate-pulse"></div>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -189,6 +192,27 @@ const About = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+            <section className="bg-gradient-to-br from-primary-600 via-primary-900 to-violet-900 py-16">
+                <div className="mx-auto max-w-7xl text-center px-4 lg:px-8">
+                    <h2 className="text-3xl font-bold text-text-inverted">
+                        Ready to start your learning?
+                    </h2>
+                    <p className="mx-auto mt-4 max-w-2xl text-primary-100">
+                        Join millions of learners from around the world and
+                        start your learning journey today.
+                    </p>
+                    <Link
+                        to="/courses"
+                        className="group mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-primary-600 shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-gray-200"
+                    >
+                        <FaArrowRight className="relative -left-4 group-hover:translate-x-3 opacity-0 scale-0 group-hover:scale-110 group-hover:opacity-100 transition-all duration-300" />
+                        <span className="relative -left-4 group-hover:translate-x-6 transition-all duration-300">
+                            Explore Courses
+                        </span>
+                        <FaArrowRight className="relative -right-1 group-hover:scale-0 scale-110 group-hover:translate-x-3 opacity-100 group-hover:opacity-0 transition-all duration-300" />
+                    </Link>
                 </div>
             </section>
         </>
