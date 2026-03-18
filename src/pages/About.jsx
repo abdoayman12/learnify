@@ -196,10 +196,10 @@ const About = () => {
             </section>
             <section className="bg-gradient-to-br from-primary-600 via-primary-900 to-violet-900 py-16">
                 <div className="mx-auto max-w-7xl text-center px-4 lg:px-8">
-                    <h2 className="text-3xl font-bold text-text-inverted">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-inverted">
                         Ready to start your learning?
                     </h2>
-                    <p className="mx-auto mt-4 max-w-2xl text-primary-100">
+                    <p className="mx-auto mt-4 max-w-xl md:max-w-2xl text-primary-100">
                         Join millions of learners from around the world and
                         start your learning journey today.
                     </p>
