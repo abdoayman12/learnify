@@ -1,4 +1,6 @@
-import { Globe, ShieldCheck } from "lucide-react";
+import { Globe, ShieldCheck, BookOpen } from "lucide-react";
+import { FaUsers } from "react-icons/fa6";
+import { FiZap } from "react-icons/fi";
 
 const list = [
     {
@@ -16,6 +18,27 @@ const list = [
     {
         title: "95%",
         description: "Success Rate",
+    },
+];
+
+const values = [
+    {
+        title: "Quality First",
+        description:
+            "Every course goes through a rigorous review process to ensure the highest quality content for our learners.",
+        Icon: BookOpen,
+    },
+    {
+        title: "Community Driven",
+        description:
+            "We foster a supportive learning community where students and instructors can connect and grow together.",
+        Icon: FaUsers,
+    },
+    {
+        title: "Innovation",
+        description:
+            "We continuously improve our platform with the latest technology to provide the best learning experience.",
+        Icon: FiZap,
     },
 ];
 
@@ -132,6 +155,39 @@ const About = () => {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section className="bg-gray-50 dark:bg-gray-900/50 py-16 lg:py-24">
+                <div className="mx-auto max-w-7xl px-4 lg:px-8">
+                    <div className="text-center">
+                        <span className="text-sm text-primary-700 uppercase font-semibold tracking-wider">
+                            Our Values
+                        </span>
+                        <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-text dark:text-text-inverted">
+                            What drives us forward
+                        </h2>
+                    </div>
+                    <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        {values.map((value) => (
+                            <div
+                                key={value.title}
+                                className="rounded-2xl bg-surface p-8 shadow-xl dark:bg-surface-dark-muted"
+                            >
+                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-100 dark:bg-primary-900/30">
+                                    <value.Icon
+                                        size={26}
+                                        className="text-primary-600"
+                                    />
+                                </div>
+                                <h3 className="mt-6 text-xl font-semibold text-text dark:text-text-inverted">
+                                    {value.title}
+                                </h3>
+                                <p className="mt-3 text-gray-600 dark:text-gray-400 text-wrap">
+                                    {value.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
