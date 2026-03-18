@@ -12,6 +12,7 @@ import {
   DollarSign,
   Info,
 } from "lucide-react";
+import BookOpenIcon from "../ui/Icons/BookOpen";
 
 const NAV_LINKS = [
   { label: "Courses", href: "/courses", icon: BookOpen },
@@ -101,9 +102,7 @@ function Navbar() {
         <div className="container-custom h-full flex items-center justify-between gap-4">
           {/* Logo */}
           <Link to={"/"} className="flex gap-2 items-center group">
-            <div className="bg-primary-600 p-2 flex items-center justify-center rounded-xl text-white group-hover:scale-105 transition duration-300">
-              <BookOpen />
-            </div>
+            <BookOpenIcon HW={10} />
             <span className="text-text dark:text-text-inverted font-extrabold font-heading text-xl">
               Learnify
             </span>

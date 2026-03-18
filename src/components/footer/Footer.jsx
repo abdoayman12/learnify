@@ -1,7 +1,7 @@
-import { BookOpen } from "lucide-react";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import BookOpenIcon from "../ui/Icons/BookOpen";
 
 const categores = [
   { label: "Web Development", href: "/web-development" },
@@ -35,9 +35,7 @@ function Footer() {
           <div className="flex flex-col gap-4 items-start md:items-center lg:items-start">
             {/* Logo */}
             <Link to={"/"} className="flex gap-2 items-center">
-              <div className="bg-primary-600 p-2 flex items-center justify-center rounded-xl text-white transition duration-300">
-                <BookOpen />
-              </div>
+              <BookOpenIcon HW={10}/>
               <span className="text-text dark:text-text-inverted font-extrabold font-heading text-xl">
                 Learnify
               </span>
