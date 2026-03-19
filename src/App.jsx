@@ -4,6 +4,7 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Footer from "./components/footer/Footer";
 import About from "./pages/About";
+import Home from "./components/Navbar/Home.jsx";
 
 /* ── Placeholder pages (each teammate fills their page) ── */
 const Placeholder = ({ title }) => (

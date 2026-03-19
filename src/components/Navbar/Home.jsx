@@ -1479,95 +1479,332 @@ BestSeller
 
 
 
+<div className='max-w-[1290px] mx-auto container w-full'>
 
+<div className='grid grid-cols-1 md:mx-0 mx-4 md:grid-cols-3 mt-12 gap-12'>
 
 
 
 
 
+<div className='bg-gray-900 border border-gray-800 p-8 rounded-3xl text-center transition-all duration-300 hover:-translate-y-2'>
 
 
+<p className='text-white text-2xl font-semibold'>Free</p>
+<p className='text-gray-400 mt-2 mb-5'>Get started with free courses</p>
+<p className='text-white text-5xl font-semibold mb-5'>Free</p>
 
 
 
+<div className='flex flex-col gap-3 mb-8'>
 
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Access to 50+ free courses</p>
+</div>
 
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Basic course completion certificates</p>
+</div>
 
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Community forum access</p>
+</div>
 
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Mobile app access</p>
+</div>
 
+</div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div className='border-2 hover:bg-white/10 w-full border-white/30 rounded-full py-4 items-center justify-center inline-flex text-white cursor-pointer'>
+<button className='font-semibold'>Start Free</button>
+</div>
 
 
 
 
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-gray-900 relative border border-indigo-400 p-8 rounded-3xl text-center transition-all duration-300 hover:-translate-y-2'>
+
+
+<div className='bg-indigo-600 rounded-full p-1.5 absolute -translate-x-1/2 left-1/2 -translate-y-[calc(50%+32px)]'>
+<p className='font-semibold text-[15px]'>Most Popular</p>
+</div>
+
+
+<p className='text-white text-2xl font-semibold'>Pro</p>
+<p className='text-gray-400 mt-2 mb-5'>Perfect for serious learners</p>
+<p className='text-white text-5xl font-semibold mb-5'>$29 <sub className='text-gray-400 text-lg font-medium'>/month</sub></p>
+
+
+
+<div className='flex flex-col gap-3 mb-8'>
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Unlimited access to all courses</p>
+</div>
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Verified certificates</p>
+</div>
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Offline viewing</p>
+</div>
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Priority support</p>
+</div>
+
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Course downloads</p>
+</div>
+
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Ad-free experience</p>
+</div>
+
+
+</div>
+
+
+
+<div className='w-full bg-primary-600 hover:bg-primary-700 shadow-lg hover:shadow-xl hover:shadow-primary-500/20 shadow-primary-500/40 rounded-full py-4 items-center justify-center inline-flex text-white cursor-pointer'>
+<button className='font-semibold'>Start Pro Trial</button>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-gray-900 border border-gray-800 p-8 rounded-3xl text-center transition-all duration-300 hover:-translate-y-2'>
+ 
+
+<p className='text-white text-2xl font-semibold'>Team</p>
+<p className='text-gray-400 mt-2 mb-5'>For teams and organizations</p>
+<p className='text-white text-5xl font-semibold mb-5'>$49 <sub className='text-gray-400 text-lg font-medium'>/month</sub></p>
+
+
+
+<div className='flex flex-col gap-3 mb-8'>
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Everything in Pro</p>
+</div>
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Team management dashboard</p>
+</div>
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Progress tracking & analytics</p>
+</div>
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Custom learning paths</p>
+</div>
+
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>SSO integration</p>
+</div>
+
+
+<div className='flex items-center gap-2.5'>
+<Check size={16} className='text-green-400'/>
+<p className='text-gray-300'>Dedicated account manager</p>
+</div>
+
+
+</div>
+
+
+
+<div className='border-2 hover:bg-white/10 w-full border-white/30 rounded-full py-4 items-center justify-center inline-flex text-white cursor-pointer'>
+<button className='font-semibold'>Contact Sales</button>
+</div>
+
+
+
+
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+<p className='text-gray-400 text-center text-sm mt-8 mx-4 md:mx-0'>All plans include a 30-day money-back guarantee. No questions asked.</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-indigo-700 py-20 md:py-24 text-center bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:32px_32px]'>
+
+
+
+
+
+
+
+
+
+
+<p className='text-4xl md:text-5xl font-extrabold tracking-tighter text-white mb-4'>Ready to Start Learning?</p>
+
+
+
+
+<div className='font-medium md:text-xl text-[18px] text-primary-200 mb-8 md:px-0 px-3'>
+<span className='text-[18px]'>Join over 50,000 students already learning on Learnify. Get unlimited access </span>
+<span className='inline md:block text-[18px]'>to all courses with our Pro plan.</span>
+</div>
+
+
+
+
+<div className='flex flex-col md:flex-row gap-4 items-center justify-center mb-9 px-4 md:px-0'>
+
+<div className='hover:shadow-2xl bg-white rounded-full py-4 px-7 inline-flex items-center justify-center text-primary-600 gap-2 cursor-pointer w-full md:w-fit'>
+<button className='font-medium text-[19px]'>Start Learning Free</button>
+<MoveRight size={18}/>
+</div>
+
+
+
+<div className='border-2 hover:border-white hover:bg-white/10 w-full md:w-fit border-white/30 rounded-full py-4 px-7 items-center justify-center inline-flex text-white cursor-pointer'>
+<button className='font-medium text-xl'>Browse Courses</button>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div className='flex flex-wrap items-center gap-6 md:gap-7 justify-center px-5 md:px-0'>
+
+
+
+<div className='flex items-center gap-2'>
+<Check size={17}/>    
+<p className='text-primary-200 text-[15px]'>No credit card required</p>
+</div>
+
+
+
+<div className='flex items-center gap-2'>
+<Check size={17}/>     
+<p className='text-primary-200 text-[15px]'>7-day free Pro trial</p>
+</div>   
+
+
+
+<div className='flex items-center gap-2'>
+<Check size={17}/> 
+<p className='text-primary-200 text-[15px]'>Cancel anytime</p>
+</div>   
+
+
+
+
+</div>
+
+
+</div>
 
 
 
