@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Check, MoveRight , Star , ShieldCheck , Clock4, CodeXml ,BarChart3,
 PenTool,Briefcase,Megaphone,Smartphone,Cloud,Camera, 
 Play,
@@ -15,6 +15,7 @@ import planetImg from "../../assets/planet.jpg"
 import uxDesignImg from "../../assets/uxdesign.jpg"
 import videoImg from "../../assets/videoImg.jpg"
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -30,7 +31,7 @@ const [isOn , setIsOn] = useState(false)
       
 
  
-<div className='relative text-center pb-20 pt-[calc(var(--navbar-height)+5rem)] md:pb-28 md:pt-[calc(var(--navbar-height)+7rem)] bg-gradient-to-br from-blue-950 via-indigo-900 to-blue-950'>
+<div className='relative text-center pb-20 pt-[calc(var(--navbar-height))] md:pt-[calc(var(--navbar-height)+4rem)] md:pb-28 bg-gradient-to-br from-blue-950 via-indigo-900 to-blue-950'>
 
 <div className="absolute pointer-events-none inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:44px_44px]"></div>
 
@@ -58,14 +59,16 @@ const [isOn , setIsOn] = useState(false)
 <div className='flex flex-col md:flex-row gap-4 items-center justify-center mb-9 px-4 md:px-0'>
 
 <div className='hover:shadow-2xl bg-white rounded-full py-4 px-7 inline-flex items-center justify-center text-primary-600 gap-2 cursor-pointer w-full md:w-fit'>
-<button className='font-medium text-[19px]'>Explore Courses</button>
+<Link to={"/courses"}><button className='font-medium text-[19px]'>Explore Courses</button></Link>
 <MoveRight size={18}/>
 </div>
 
 
 
 <div className='border-2 hover:border-white hover:bg-white/10 w-full md:w-fit border-white/30 rounded-full py-4 px-7 items-center justify-center inline-flex text-white cursor-pointer'>
+<a href="#pricing">
 <button className='font-medium text-xl'>View Pricing</button>
+</a>
 </div>
 
 
@@ -186,6 +189,7 @@ const [isOn , setIsOn] = useState(false)
 <div className=' md:grid md:grid-cols-4 flex flex-col gap-6 mx-4 md:mx-0'>
 
 
+<Link to={"/courses"}>
 <div className='bg-gray-900 w-full ps-7 py-7 rounded-2xl group border border-gray-800 hover:border-primary-800 cursor-pointer'>
 <div className='bg-blue-800/20 inline-flex items-center justify-center p-3 rounded-xl '>
 <CodeXml className='text-blue-400	' size={27}/> 
@@ -198,11 +202,12 @@ const [isOn , setIsOn] = useState(false)
 <MoveRight size={10}/>
 </div>
 </div>
+</Link>
 
 
 
 
-
+<Link to={"/courses"}>
 <div className='bg-gray-900 w-full ps-7 py-7 rounded-2xl group border border-gray-800 hover:border-primary-800 cursor-pointer'>
 <div className='bg-purple-800/20 inline-flex items-center justify-center p-3 rounded-xl '>
 <BarChart3 className='text-purple-400	' size={27}/> 
@@ -214,6 +219,7 @@ const [isOn , setIsOn] = useState(false)
 <MoveRight size={10}/>
 </div>
 </div>
+</Link>
 
 
 
@@ -222,7 +228,7 @@ const [isOn , setIsOn] = useState(false)
 
 
 
-
+<Link to={"/courses"}>
 <div className='bg-gray-900 w-full ps-7 py-7 rounded-2xl group border border-gray-800 hover:border-primary-800 cursor-pointer'>
 <div className='bg-pink-800/20 inline-flex items-center justify-center p-3 rounded-xl '>
 <PenTool className='text-pink-400	' size={27}/> 
@@ -234,11 +240,12 @@ const [isOn , setIsOn] = useState(false)
 <MoveRight size={10}/>
 </div>
 </div>
+</Link>
 
 
 
 
-
+<Link to={"/courses"}>
 <div className='bg-gray-900 w-full ps-7 py-7 rounded-2xl group border border-gray-800 hover:border-primary-800 cursor-pointer'>
 <div className='bg-amber-800/20 inline-flex items-center justify-center p-3 rounded-xl '>
 <Briefcase className='text-amber-400	' size={27}/> 
@@ -250,6 +257,7 @@ const [isOn , setIsOn] = useState(false)
 <MoveRight size={10}/>
 </div>
 </div>
+</Link>
 
 
 
@@ -259,7 +267,7 @@ const [isOn , setIsOn] = useState(false)
 
 
 
-
+<Link to={"/courses"}>
 <div className='bg-gray-900 w-full ps-7 py-7 rounded-2xl group border border-gray-800 hover:border-primary-800 cursor-pointer'>
 <div className='bg-green-800/20 inline-flex items-center justify-center p-3 rounded-xl '>
 <Megaphone className='text-green-400	' size={27}/> 
@@ -271,6 +279,7 @@ const [isOn , setIsOn] = useState(false)
 <MoveRight size={10}/>
 </div>
 </div>
+</Link>
 
 
 
@@ -287,7 +296,7 @@ const [isOn , setIsOn] = useState(false)
 
 
 
-
+<Link to={"/courses"}>
 <div className='bg-gray-900 w-full ps-7 py-7 rounded-2xl group border border-gray-800 hover:border-primary-800 cursor-pointer'>
 <div className='bg-cyan-800/20 inline-flex items-center justify-center p-3 rounded-xl '>
 <Smartphone className='text-cyan-400	' size={27}/> 
@@ -299,6 +308,7 @@ const [isOn , setIsOn] = useState(false)
 <MoveRight size={10}/>
 </div>
 </div>
+</Link>
 
 
 
@@ -306,7 +316,7 @@ const [isOn , setIsOn] = useState(false)
 
 
 
-
+<Link to={"/courses"}>
 <div className='bg-gray-900 w-full ps-7 py-7 rounded-2xl group border border-gray-800 hover:border-primary-800 cursor-pointer'>
 <div className='bg-indigo-800/20 inline-flex items-center justify-center p-3 rounded-xl '>
 <Cloud className='text-indigo-400	' size={27}/> 
@@ -318,6 +328,7 @@ const [isOn , setIsOn] = useState(false)
 <MoveRight size={10}/>
 </div>
 </div>
+</Link>
 
 
 
@@ -328,7 +339,7 @@ const [isOn , setIsOn] = useState(false)
 
 
 
-
+<Link to={"/courses"}>
 <div className='bg-gray-900 w-full ps-7 py-7 rounded-2xl group border border-gray-800 hover:border-primary-800 cursor-pointer'>
 <div className='bg-rose-700/20 inline-flex items-center justify-center p-3 rounded-xl '>
 <Camera className='text-rose-400	' size={27}/> 
@@ -340,6 +351,7 @@ const [isOn , setIsOn] = useState(false)
 <MoveRight size={10}/>
 </div>
 </div>
+</Link>
 
 
 </div>
@@ -390,10 +402,12 @@ const [isOn , setIsOn] = useState(false)
 
 
 
+<Link to={"/courses"}>
 <div className='items-center gap-2 text-primary-400 hover:text-indigo-800 inline-flex cursor-pointer pb-8 md:pb-8'>
 <span className='font-semibold'>View All Courses</span>
 <MoveRight size={18}/>
 </div>
+</Link>
 
 
 </div>
@@ -519,34 +533,6 @@ BestSeller
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
 
@@ -638,26 +624,6 @@ BestSeller
 <span className='text-gray-600'><del>$189.99</del></span>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1265,12 +1231,14 @@ BestSeller
 
 
 
+<Link to={"/Instructors"}>
 <div className='flex justify-center'>
 <div className='items-center gap-2 text-indigo-400 hover:text-indigo-700 inline-flex cursor-pointer mt-12'>
 <span className='font-semibold'>View All Instructors</span>
 <MoveRight size={18}/>
 </div>
 </div>
+</Link>
 
 
 </div>
@@ -1426,7 +1394,7 @@ BestSeller
 
 
 
-<div className='bg-gray-950 py-24'>
+<div className='bg-gray-950 py-24' id='pricing'>
 
 
 
@@ -1821,16 +1789,23 @@ BestSeller
 
 <div className='flex flex-col md:flex-row gap-4 items-center justify-center mb-9 px-4 md:px-0'>
 
+
+<Link to={"/signup"}
+onClick={() => window.scrollTo(0,0)}
+>
 <div className='hover:shadow-2xl bg-white rounded-full py-4 px-7 inline-flex items-center justify-center text-primary-600 gap-2 cursor-pointer w-full md:w-fit'>
 <button className='font-medium text-[19px]'>Start Learning Free</button>
 <MoveRight size={18}/>
 </div>
 
+</Link>
 
 
+<Link to={"/courses"}>
 <div className='border-2 hover:border-white hover:bg-white/10 w-full md:w-fit border-white/30 rounded-full py-4 px-7 items-center justify-center inline-flex text-white cursor-pointer'>
 <button className='font-medium text-xl'>Browse Courses</button>
 </div>
+</Link>
 
 
 </div>
