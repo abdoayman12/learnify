@@ -14,7 +14,7 @@ import codeImg from "../../assets/code.jpg"
 import planetImg from "../../assets/planet.jpg"
 import uxDesignImg from "../../assets/uxdesign.jpg"
 import videoImg from "../../assets/videoImg.jpg"
-
+import { motion, AnimatePresence } from "framer-motion";
 
 function Home() {
 
@@ -1565,7 +1565,40 @@ BestSeller
 
 <p className='text-white text-2xl font-semibold'>Pro</p>
 <p className='text-gray-400 mt-2 mb-5'>Perfect for serious learners</p>
-<p className='text-white text-5xl font-semibold mb-5'>$29 <sub className='text-gray-400 text-lg font-medium'>/month</sub></p>
+
+
+<AnimatePresence mode="wait">
+  <motion.p
+    key={isOn ? "year" : "month"}
+    initial={{ opacity: 0, y: 5 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -5 }}
+    transition={{ duration: 0.3 }}
+    className={`text-white text-5xl font-semibold ${isOn ? "mb-2" : "mb-5"}`}
+  >
+    ${isOn ? "290" : "29"}{" "}
+    <sub className='text-gray-400 text-lg font-medium'>
+      /{isOn ? "year" : "month"}
+    </sub>
+  </motion.p>
+</AnimatePresence>
+
+
+
+<AnimatePresence>
+  {isOn && (
+    <motion.p
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.3 }}
+      className="text-emerald-400 text-sm mb-5"
+    >
+      Save $58/year
+    </motion.p>
+  )}
+</AnimatePresence>
+
 
 
 
@@ -1646,7 +1679,39 @@ BestSeller
 
 <p className='text-white text-2xl font-semibold'>Team</p>
 <p className='text-gray-400 mt-2 mb-5'>For teams and organizations</p>
-<p className='text-white text-5xl font-semibold mb-5'>$49 <sub className='text-gray-400 text-lg font-medium'>/month</sub></p>
+
+
+<AnimatePresence mode="wait">
+  <motion.p
+    key={isOn ? "year" : "month"}
+    initial={{ opacity: 0, y: 5 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -5 }}
+    transition={{ duration: 0.3 }}
+    className={`text-white text-5xl font-semibold ${isOn ? "mb-2" : "mb-5"}`}
+  >
+    ${isOn ? "470" : "49"}{" "}
+    <sub className='text-gray-400 text-lg font-medium'>
+      /{isOn ? "year" : "month"}
+    </sub>
+  </motion.p>
+</AnimatePresence>
+
+
+
+<AnimatePresence>
+  {isOn && (
+    <motion.p
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.3 }}
+      className="text-emerald-400 text-sm mb-5"
+    >
+      Save $118/year
+    </motion.p>
+  )}
+</AnimatePresence>
 
 
 
