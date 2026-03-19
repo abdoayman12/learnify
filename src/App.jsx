@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import Footer from "./components/footer/Footer";
 import About from "./pages/About";
 
 /* ── Placeholder pages (each teammate fills their page) ── */
@@ -51,6 +52,7 @@ export default function App() {
                     element={<Placeholder title="404 – Page Not Found" />}
                 />
             </Routes>
+            <Footer />
         </>
     );
 }

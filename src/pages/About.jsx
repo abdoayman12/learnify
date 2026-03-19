@@ -1,4 +1,7 @@
-import { Globe, ShieldCheck } from "lucide-react";
+import { Globe, ShieldCheck, BookOpen } from "lucide-react";
+import { FaUsers, FaArrowRight } from "react-icons/fa6";
+import { FiZap } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const list = [
     {
@@ -19,6 +22,27 @@ const list = [
     },
 ];
 
+const values = [
+    {
+        title: "Quality First",
+        description:
+            "Every course goes through a rigorous review process to ensure the highest quality content for our learners.",
+        Icon: BookOpen,
+    },
+    {
+        title: "Community Driven",
+        description:
+            "We foster a supportive learning community where students and instructors can connect and grow together.",
+        Icon: FaUsers,
+    },
+    {
+        title: "Innovation",
+        description:
+            "We continuously improve our platform with the latest technology to provide the best learning experience.",
+        Icon: FiZap,
+    },
+];
+
 const About = () => {
     return (
         <>
@@ -33,7 +57,9 @@ const About = () => {
                         </span>
                         <h1 className="mt-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
                             Democratizing education for{" "}
-                            <span className="text-gradient">everyone</span>
+                            <span className="bg-gradient-to-br from-purple-600 to-cyan-500 bg-clip-text text-transparent">
+                                everyone
+                            </span>
                         </h1>
                         <p className="mt-6 text-lg text-primary-200">
                             We believe that education should be accessible to
@@ -117,7 +143,7 @@ const About = () => {
                                     alt="meet the team"
                                 />
                             </div>
-                            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-xl dark:bg-gray-800">
+                            <div className="animate-float absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-xl dark:bg-gray-800">
                                 <div className="flex items-center gap-2">
                                     <div className="rounded-full bg-[#2eff04] w-2 h-2 animate-pulse"></div>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -133,6 +159,60 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section className="bg-gray-50 dark:bg-gray-900/50 py-16 lg:py-24">
+                <div className="mx-auto max-w-7xl px-4 lg:px-8">
+                    <div className="text-center">
+                        <span className="text-sm text-primary-700 uppercase font-semibold tracking-wider">
+                            Our Values
+                        </span>
+                        <h2 className="mt-4 text-3xl lg:text-4xl font-bold text-text dark:text-text-inverted">
+                            What drives us forward
+                        </h2>
+                    </div>
+                    <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        {values.map((value) => (
+                            <div
+                                key={value.title}
+                                className="rounded-2xl bg-surface p-8 shadow-xl dark:bg-surface-dark-muted"
+                            >
+                                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-100 dark:bg-primary-900/30">
+                                    <value.Icon
+                                        size={26}
+                                        className="text-primary-600"
+                                    />
+                                </div>
+                                <h3 className="mt-6 text-xl font-semibold text-text dark:text-text-inverted">
+                                    {value.title}
+                                </h3>
+                                <p className="mt-3 text-gray-600 dark:text-gray-400 text-wrap">
+                                    {value.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            <section className="bg-gradient-to-br from-primary-600 via-primary-900 to-violet-900 py-16">
+                <div className="mx-auto max-w-7xl text-center px-4 lg:px-8">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-inverted">
+                        Ready to start your learning?
+                    </h2>
+                    <p className="mx-auto mt-4 max-w-xl md:max-w-2xl text-primary-100">
+                        Join millions of learners from around the world and
+                        start your learning journey today.
+                    </p>
+                    <Link
+                        to="/courses"
+                        className="group mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-primary-600 shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-gray-200"
+                    >
+                        <FaArrowRight className="relative -left-4 group-hover:translate-x-3 opacity-0 scale-0 group-hover:scale-110 group-hover:opacity-100 transition-all duration-300" />
+                        <span className="relative -left-4 group-hover:translate-x-6 transition-all duration-300">
+                            Explore Courses
+                        </span>
+                        <FaArrowRight className="relative -right-1 group-hover:scale-0 scale-110 group-hover:translate-x-3 opacity-100 group-hover:opacity-0 transition-all duration-300" />
+                    </Link>
                 </div>
             </section>
         </>
