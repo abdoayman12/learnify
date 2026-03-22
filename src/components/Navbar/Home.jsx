@@ -1420,14 +1420,16 @@ BestSeller
 
 <div className='flex items-center gap-4'>
 <span className='font-semibold dark:text-white text-sm'>Monthly</span>
-<div onClick={ () => setIsOn(!isOn)}>
-<svg className='cursor-pointer rounded-full ' width="60" height="30" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="60" height="30" rx="15" fill={isOn ? "#1D4ED8" : "#9CA3AF"}/>
-  <circle  
-  className='transition-all duration-200'
-  cx={isOn ? "45" : "15"} cy="15" r="11" fill="#ffffff"/>
-</svg>
-</div>
+<button
+  onClick={() => setIsOn(!isOn)}
+  className={`relative inline-flex h-7 w-14 shrink-0 cursor-pointer items-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+    ${isOn ? "bg-blue-600" : "bg-gray-200 dark:bg-gray-700"}`}
+>
+  <span
+    className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out
+      ${isOn ? "translate-x-8" : "translate-x-1"}`}
+  ></span>
+</button>
 </div>
 
 
