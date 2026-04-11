@@ -10,7 +10,6 @@ import codeImg from "../../assets/code.jpg"
 import planetImg from "../../assets/planet.jpg"
 import uxDesignImg from "../../assets/uxdesign.jpg"
 import videoImg from "../../assets/videoImg.jpg"
-import { motion, AnimatePresence } from "framer-motion";
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -706,7 +705,6 @@ const pricingPlans = [
 
 
 <div className='bg-gray-50 dark:bg-gray-900 pb-16 pt-20 md:py-24'>
-
 
 
 
