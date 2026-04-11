@@ -57,6 +57,42 @@ const stats = [
 ];
 
 
+const colorClasses = {
+  blue: {
+    bg: "bg-blue-100 dark:bg-blue-800/20",
+    text: "text-blue-600 dark:text-blue-400",
+  },
+  purple: {
+    bg: "bg-purple-100 dark:bg-purple-800/20",
+    text: "text-purple-600 dark:text-purple-400",
+  },
+  pink: {
+    bg: "bg-pink-100 dark:bg-pink-800/20",
+    text: "text-pink-600 dark:text-pink-400",
+  },
+  amber: {
+    bg: "bg-amber-100 dark:bg-amber-800/20",
+    text: "text-amber-600 dark:text-amber-400",
+  },
+  green: {
+    bg: "bg-green-100 dark:bg-green-800/20",
+    text: "text-green-600 dark:text-green-400",
+  },
+  cyan: {
+    bg: "bg-cyan-100 dark:bg-cyan-800/20",
+    text: "text-cyan-600 dark:text-cyan-400",
+  },
+  indigo: {
+    bg: "bg-indigo-100 dark:bg-indigo-800/20",
+    text: "text-indigo-600 dark:text-indigo-400",
+  },
+  rose: {
+    bg: "bg-rose-100 dark:bg-rose-800/20",
+    text: "text-rose-600 dark:text-rose-400",
+  },
+};
+
+
 
 const categories = [
   {
@@ -462,41 +498,40 @@ const pricingPlans = [
 
 
 
+{categories.map((cat, i) => {
+  const Icon = cat.icon;
+  const styles = colorClasses[cat.color];
 
- {categories.map((cat, i) => {
-    const Icon = cat.icon;
+  return (
+    <Link to="/courses" key={i}>
+      <div className="dark:bg-gray-900 w-full ps-7 py-7 h-full rounded-2xl group border hover:shadow-lg border-gray-200 dark:border-gray-800 hover:border-primary-300 dark:hover:border-primary-800 cursor-pointer">
 
-    return (
-      <Link to="/courses" key={i}>
-        <div className="dark:bg-gray-900 w-full ps-7 py-7 h-full rounded-2xl group border hover:shadow-lg border-gray-200 dark:border-gray-800 hover:border-primary-300 dark:hover:border-primary-800 cursor-pointer">
-
-          <div className={`bg-${cat.color}-100 dark:bg-${cat.color}-800/20 inline-flex items-center justify-center p-3 rounded-xl`}>
-            <Icon className={`text-${cat.color}-600 dark:text-${cat.color}-400`} size={27} />
-          </div>
-
-          <p className="dark:text-white font-bold text-xl pt-4 pb-2 group-hover:text-indigo-600">
-            {cat.title}
-          </p>
-
-          {cat.desc.map((line, idx) => (
-            <span
-              key={idx}
-              className="dark:text-gray-400 text-gray-600 text-[15px] block leading-none"
-            >
-              {line}
-            </span>
-          ))}
-
-          <div className="flex items-center gap-1.5 text-indigo-600 mt-3">
-            <p>{cat.courses} courses</p>
-            <MoveRight size={10} />
-          </div>
-
+        <div className={`${styles.bg} inline-flex items-center justify-center p-3 rounded-xl`}>
+          <Icon className={`${styles.text}`} size={27} />
         </div>
-      </Link>
-    );
-  })}
 
+        <p className="dark:text-white font-bold text-xl pt-4 pb-2 group-hover:text-indigo-600">
+          {cat.title}
+        </p>
+
+        {cat.desc.map((line, idx) => (
+          <span
+            key={idx}
+            className="dark:text-gray-400 text-gray-600 text-[15px] block leading-none"
+          >
+            {line}
+          </span>
+        ))}
+
+        <div className="flex items-center gap-1.5 text-indigo-600 mt-3">
+          <p>{cat.courses} courses</p>
+          <MoveRight size={10} />
+        </div>
+
+      </div>
+    </Link>
+  );
+})}
 
 
 
