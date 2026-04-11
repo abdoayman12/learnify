@@ -236,6 +236,30 @@ const courses = [
 
 
 
+const benefits = [
+  {
+    icon: Clock4,
+    title: "Learn at Your Pace",
+    desc: "Access courses anytime, anywhere. Learn on your schedule with lifetime access to all purchased courses.",
+  },
+  {
+    icon: Users,
+    title: "Expert Instructors",
+    desc: "Learn from industry professionals working at top companies like Google, Meta, and Amazon.",
+  },
+  {
+    icon: CodeXml,
+    title: "Hands-on Projects",
+    desc: "Build real-world projects and add them to your portfolio. Practice what you learn with coding exercises.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Certificates",
+    desc: "Earn verified certificates upon completion. Share your achievements on LinkedIn and your resume.",
+  },
+];
+
+
 
 const instructors = [
   {
@@ -683,6 +707,119 @@ const pricingPlans = [
 
 
 
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div className='bg-white dark:bg-gray-950 py-24 px-4 md:px-0'>
+
+
+<div className='max-w-[1290px] mx-auto container w-full'>
+
+
+
+<div className='flex flex-col md:grid md:grid-cols-2 items-center gap-14'>
+<div className='flex flex-col'>
+<div>
+<p className='uppercase text-primary-600 font-semibold tracking-wider text-sm'>Why Choose Us</p>
+<p className='dark:text-white font-bold text-3xl md:text-4xl py-2.5'>The Best Platform to Learn New Skills</p>
+<span className='text-gray-600 dark:text-gray-400 text-[18px] font-medium'>We provide everything you need to succeed in your learning </span>
+<span className='text-gray-600 dark:text-gray-400 text-[18px] font-medium pb-12 inline md:block '>journey. Our platform is designed to make learning effective and enjoyable.</span>
+</div>
+
+
+
+
+ 
+<div className='flex flex-col md:grid md:grid-cols-2 gap-6 mt-12 md:mt-0'>
+
+
+
+  {benefits.map((item, index) => {
+    const Icon = item.icon;
+    return (
+      <div key={index} className='flex gap-4 items-start'>
+        <div className='bg-primary-100 dark:bg-blue-800/20 flex items-center justify-center p-3 rounded-xl'>
+          <Icon className='text-indigo-600 dark:text-indigo-400' size={24} />
+        </div>
+
+        <div className='flex flex-col'>
+          <p className='font-semibold text-[18px] dark:text-white'>
+            {item.title}
+          </p>
+          <p className='text-gray-600 leading-normal dark:text-gray-400 text-[15px]'>
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    );
+  })}
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div className='relative'>
+<img src={videoImg} alt="video image" className='dark:opacity-70 rounded-3xl'/>
+
+<div className='absolute inset-0 flex items-center justify-center'>
+<div className='rounded-full bg-white p-6 inline-flex items-center justify-center shadow-md hover:shadow-xl transition-shadow duration-500 ease-in-out hover:bg-blue-50'>
+<Play size={19} stroke='#2563eb' fill='#2563eb'/>
+</div>
+</div>
+
+
+
+
+<div className='absolute -bottom-6 -left-6'>
+
+
+<div className='bg-white shadow-lg dark:bg-gray-800 p-6 rounded-2xl flex items-center gap-3'>
+
+
+<div className='flex -space-x-2'>
+<img src={girl1} alt="girl1" className='rounded-full w-10 h-10 border-2 border-white'/>
+<img src={boy1} alt="boy1" className='rounded-full w-10 border-2 h-10 border-white'/>
+<img src={girl2} alt="girl2" className='rounded-full w-10 border-2 h-10 border-white'/>
+</div>
+<div>
+<p className='dark:text-white font-bold'>50K+</p>
+<p className='text-gray-600 dark:text-gray-500 text-sm'>Happy Students</p>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
 </div>
 
 
